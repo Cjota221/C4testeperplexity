@@ -1,0 +1,4 @@
+/* Grid base para mobile first */
+.grid-container {
+  grid-template-columns: 1fr;
+}
