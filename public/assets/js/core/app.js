@@ -3,10 +3,26 @@ const C4App = {
     environment: 'development'
   },
   modules: {},
-  init() {
+  user: null,
+
+  async init() {
+    // Inicializar Supabase (config.js deve ser carregado antes)
+    this.database = C4App.database;
+    this.auth = C4App.auth;
+
+    await this.auth.checkAuth();
+
+    // Inicializar módulos
+    this.modules.products = C4App.modules.products;
+    this.modules.sales = C4App.modules.sales;
+    Object.values(this.modules).forEach(module => {
+      if (module.init) module.init();
+    });
+
     this.setupNavigation();
     this.navigate('dashboard');
   },
+
   setupNavigation() {
     const navButtons = document.querySelectorAll('.nav-btn');
     navButtons.forEach(btn => {
@@ -15,6 +31,7 @@ const C4App = {
       });
     });
   },
+
   navigate(pageId) {
     document.querySelectorAll('.page').forEach(page => {
       page.style.display = 'none';
@@ -24,6 +41,10 @@ const C4App = {
     if (targetPage) {
       targetPage.style.display = 'block';
       targetPage.classList.add('active');
+      // Renderizar módulo se existir
+      if (this.modules[pageId] && this.modules[pageId].render) {
+        this.modules[pageId].render();
+      }
     }
     // Atualizar estado ativo dos botões
     document.querySelectorAll('.nav-btn').forEach(btn => {
