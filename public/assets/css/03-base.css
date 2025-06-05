@@ -1,0 +1,60 @@
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+.app-header {
+  background-color: var(--color-surface);
+  padding: var(--spacing-md);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.top-nav {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.nav-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: var(--color-primary);
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.app-main {
+  flex-grow: 1;
+  padding: var(--spacing-lg);
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.grid-container {
+  display: grid;
+  gap: var(--spacing-md);
+}
