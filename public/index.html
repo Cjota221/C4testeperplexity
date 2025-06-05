@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C4 App - Gestão Financeira</title>
+  <link rel="stylesheet" href="assets/css/01-variables.css" />
+  <link rel="stylesheet" href="assets/css/02-reset.css" />
+  <link rel="stylesheet" href="assets/css/03-base.css" />
+  <link rel="stylesheet" href="assets/css/04-components.css" />
+  <link rel="stylesheet" href="assets/css/05-layout.css" />
+  <link rel="stylesheet" href="assets/css/06-responsive.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1 class="logo">C4</h1>
+      <nav class="top-nav">
+        <button class="nav-btn" data-page="dashboard">Dashboard</button>
+        <button class="nav-btn" data-page="products">Produtos</button>
+        <button class="nav-btn" data-page="sales">Vendas</button>
+        <button class="nav-btn" data-page="reports">Relatórios</button>
+        <button class="nav-btn" data-page="profile">Perfil</button>
+      </nav>
+    </header>
+
+    <main class="app-main">
+      <section id="dashboard-page" class="page active">
+        <h2>Dashboard</h2>
+        <div class="grid-container">
+          <!-- Conteúdo do dashboard -->
+        </div>
+      </section>
+
+      <section id="products-page" class="page">
+        <h2>Produtos</h2>
+        <div class="grid-container">
+          <!-- Conteúdo produtos -->
+        </div>
+      </section>
+
+      <section id="sales-page" class="page">
+        <h2>Vendas</h2>
+        <div class="grid-container">
+          <!-- Conteúdo vendas -->
+        </div>
+      </section>
+
+      <section id="reports-page" class="page">
+        <h2>Relatórios</h2>
+        <div class="grid-container">
+          <!-- Conteúdo relatórios -->
+        </div>
+      </section>
+
+      <section id="profile-page" class="page">
+        <h2>Perfil</h2>
+        <div class="grid-container">
+          <!-- Conteúdo perfil -->
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-btn" data-page="dashboard">🏠</button>
+      <button class="nav-btn" data-page="products">📦</button>
+      <button class="nav-btn" data-page="sales">💰</button>
+      <button class="nav-btn" data-page="reports">📊</button>
+      <button class="nav-btn" data-page="profile">👤</button>
+    </nav>
+  </div>
+
+  <script src="assets/js/core/app.js"></script>
+</body>
+</html>
