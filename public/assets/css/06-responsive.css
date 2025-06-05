@@ -1,0 +1,46 @@
+/* Mobile pequeno */
+@media (max-width: 320px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile grande */
+@media (min-width: 481px) and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .bottom-nav {
+    display: none;
+  }
+  .app-header {
+    position: relative;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .app {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
